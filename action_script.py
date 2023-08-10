@@ -9,7 +9,8 @@ print("Command-line arguments:", sys.argv)
 # Read the inputs from the environment variables
 sub_action = os.environ.get('INPUT_SUB-ACTION')
 pattern = os.environ.get('INPUT_PATTERN')
-repo = f"/home/runner/work/{os.environ.get('GITHUB_REPOSITORY')}"
+# repo = f"/home/runner/work/{os.environ.get('GITHUB_REPOSITORY')}"
+repo = os.environ.get('GITHUB_WORKSPACE')
 print(repo)
 print(type(repo))
 def cut_branch():

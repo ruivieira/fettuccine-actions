@@ -17,3 +17,4 @@ runs:
   args:
       - ${{ inputs.sub-action }}
       - ${{ inputs.pattern }}
+      - ${{ inputs.repo }}

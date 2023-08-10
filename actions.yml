@@ -1,0 +1,12 @@
+name: 'Fettuccine Actions'
+description: 'A set of customizable actions using the fettuccine package'
+inputs:
+  sub-action:
+    description: 'Sub-action to run (e.g., cut-branch, foo)'
+    required: true
+  pattern:
+    description: 'Pattern for branch cutting (e.g., release-$version)'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

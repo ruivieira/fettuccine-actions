@@ -9,9 +9,10 @@ print("Command-line arguments:", sys.argv)
 # Read the inputs from the environment variables
 sub_action = os.environ.get('INPUT_SUB-ACTION')
 pattern = os.environ.get('INPUT_PATTERN')
+repo = os.environ.get('INPUT_REPO')
 
 def cut_branch():
-    project = Git(".")
+    project = Git(repo)
     new_branch_name = project.branches.create_minor_branch(pattern)
     remote = project._repo.remotes["origin"]
     github_token = os.environ['GITHUB_TOKEN']

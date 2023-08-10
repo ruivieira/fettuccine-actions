@@ -7,6 +7,10 @@ inputs:
   pattern:
     description: 'Pattern for branch cutting (e.g., release-$version)'
     required: false
+  repo:
+    description: 'Location of the repository'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'

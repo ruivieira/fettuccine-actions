@@ -10,7 +10,8 @@ print("Command-line arguments:", sys.argv)
 sub_action = os.environ.get('INPUT_SUB-ACTION')
 pattern = os.environ.get('INPUT_PATTERN')
 repo = os.environ.get('INPUT_REPO')
-
+print(repo)
+print(type(repo))
 def cut_branch():
     project = Git(repo)
     new_branch_name = project.branches.create_minor_branch(pattern)

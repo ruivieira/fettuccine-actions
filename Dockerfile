@@ -5,3 +5,4 @@ RUN pip install fettuccine
 COPY action_script.py /action_script.py
 
 CMD ["python", "/action_script.py"]
+ENTRYPOINT ["python3", "-u"]

@@ -5,7 +5,7 @@ import logging
 import pygit2
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-
+print("Command-line arguments:", sys.argv)
 # Read the inputs from the environment variables
 sub_action = sys.argv[1]
 pattern = sys.argv[2]

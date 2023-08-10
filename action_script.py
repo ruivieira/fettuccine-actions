@@ -1,5 +1,5 @@
 import os
-import fettuccine
+from fettuccine.git import Git
 import sys
 import logging
 import pygit2
@@ -11,7 +11,7 @@ sub_action = os.environ.get('INPUT_SUB-ACTION')
 pattern = os.environ.get('INPUT_PATTERN')
 
 def cut_branch():
-    project = fettuccine.git.Git()
+    project = Git(".")
     new_branch_name = project.branches.create_minor_branch(pattern)
     remote = project._repo.remotes["origin"]
     github_token = os.environ['GITHUB_TOKEN']
